@@ -1,0 +1,76 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Stock</title>
+</head>
+<body>
+    @model Sitecore.Feature.Fundamentals.Models.StockViewModel
+    <div class="row">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>&nbsp;</th>
+                    <th>Ticker Name</th>
+                    <th>&nbsp;</th>
+                    <th>Alert</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Stocks != null)
+                {
+                    foreach (var s in Model.Stocks)
+                    {
+                <tr>
+                    <td>@s.Id</td>
+                    <td>&nbsp;</td>
+                    <td>@s.Name</td>
+                    <td>&nbsp;</td>
+                    <td>@s.Alert</td>
+                </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="row">
+        @if (Model.GetStocksError != null)
+        {
+            @Model.GetStocksError;
+        }
+
+        @if (Model.GetAlertsError != null)
+        {
+            @Model.GetAlertsError;
+        }
+        <br />
+    </div>
+    @*<div class="row">
+        <table>
+            <thead>
+                <tr>
+                    <th>Available Alerts</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Alerts != null)
+                {
+                    foreach (var s in Model.Alerts)
+                    {
+                        <tr>
+                            <td>@s.Alert</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>*@
+</body>
+</html>

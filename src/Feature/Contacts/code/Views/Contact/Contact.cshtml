@@ -1,0 +1,22 @@
+﻿@model Sitecore.Feature.Contacts.Models.ContactsIndex
+
+<div class="row">
+    <h1>@Model.FirstName @Model.LastName</h1>
+</div>
+<div class="row">
+    <h2>@Model.Email</h2>
+</div>
+<div class="row">
+    <h2>@Model.Phone</h2>
+</div>
+<div class="row">
+    <h3>@Model.JobTitle</h3>
+</div>
+<div class="row">
+    <p>@Model.Bio</p>
+</div>
+
+@*Search Competencies:
++ Create a search-driven component.
++ Define item buckets in Sitecore. /sitecore/content/Contacts/ContactsIndex/Contacts Bucket*@
+

@@ -1,0 +1,29 @@
+﻿@model Sitecore.Feature.Contacts.Models.ContactsIndex
+
+<div class="row">
+    <div class="card">
+        <div class="card-header">
+            Contacts Index
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Contacts</h5>
+            <p class="card-text">
+                @Model.Intro
+            </p>
+            <table>
+                @*Use item bucket for datasource: Source field = StartSearchLocation={30213F31-B7D5-492E-96DD-B5A32E9FC6CD}&Filter=+_templatename:Contact*@
+                @foreach (var contact in Model.Contacts)
+                {
+                    <tr>
+                        <td>
+                            <a href="@contact.Url" target="_blank" aria-label="@contact.Url">
+                                @contact.FirstName
+                                @contact.LastName
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<KnownItemCache>
+  <KnownItems Configuration="Debug">
+    <Id Path="/sitecore/content">0de95ae4-41ab-4d01-9eb0-67441b7c2450</Id>
+    <Id Path="/sitecore/content/Home">110d559f-dea5-42ea-9c1c-8a5df7e70ef9</Id>
+    <Id Path="/sitecore/content/Home/ArticleFeed">2575c9dd-a5bc-474b-8700-efaa94b8315f</Id>
+    <Id Path="/sitecore/layout">eb2e4ffd-2761-4653-b052-26a64d385227</Id>
+    <Id Path="/sitecore/layout/Renderings">32566f0e-7686-45f1-a12f-d7260bd78bc3</Id>
+    <Id Path="/sitecore/layout/Renderings/Feature">da61ad50-8fdb-4252-a68f-b4470b1c9fe8</Id>
+    <Id Path="/sitecore/layout/Renderings/Feature/Articles">cbbd8785-9bc7-43dc-8438-ad20c85b9d2d</Id>
+    <Id Path="/sitecore/templates">3c1715fe-6a13-4fcf-845f-de308ba9741d</Id>
+    <Id Path="/sitecore/templates/Feature">8f343079-3cc5-4ef7-bc27-32addb46f45e</Id>
+    <Id Path="/sitecore/templates/Feature/Articles">f21b642a-d605-4c1c-aad8-bbe5273109f0</Id>
+  </KnownItems>
+</KnownItemCache>

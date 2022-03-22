@@ -1,0 +1,26 @@
+﻿@model Sitecore.Feature.Articles.Models.ReadJsonStringViewModel
+
+<div class="row">
+    <div class="card">
+        <div class="card-header">
+            Simple[A] Traction Project
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Goals:</h5>
+            <p class="card-text">
+                <ul>
+                    <li>Stand up local Sitecore environment</li>
+                    <li>
+                        Build a module which imports a file representing content schema and creates data
+                        templates within Sitecore representing the schema.
+                    </li>
+                </ul>
+            </p>
+            @*On submit: Reads ContentModel.Json and creates Article template items in /sitecore/templates/Feature/Articles (ArticlesController.cs)*@
+            @using (Html.BeginForm("Index", "Articles", FormMethod.Post))
+            {
+                <input class="btn btn-primary" type="submit" value="Import Article Templates" />
+            }
+        </div>
+    </div>
+</div>

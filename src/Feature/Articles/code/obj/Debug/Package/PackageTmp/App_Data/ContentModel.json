@@ -1,0 +1,84 @@
+{
+  "contentmodel": {
+    "contenttype": [
+      {
+        "name": "Article",
+        "inherits": [
+          {
+            "type": "Base"
+          }
+        ],
+        "fields": [
+          {
+            "name": "Short Description",
+            "metadata": {
+              "objtype": "String",
+              "fieldtype": "Textarea"
+            }
+          },
+          {
+            "name": "Body",
+            "metadata": {
+              "objtype": "String",
+              "fieldtype": "Richtext"
+            }
+          },
+          {
+            "name": "Dateline Date",
+            "metadata": {
+              "objtype": "Date",
+              "fieldtype": "Date"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Base",
+        "inherits": [],
+        "fields": [
+          {
+            "name": "Title",
+            "metadata": {
+              "objtype": "String",
+              "fieldtype": "Textbox"
+            }
+          },
+          {
+            "name": "Subtitle",
+            "metadata": {
+              "objtype": "String",
+              "fieldtype": "Textbox"
+            }
+          },
+          {
+            "name": "Author",
+            "metadata": {
+              "objtype": "Person",
+              "fieldtype": "Selection"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Person",
+        "inherits": [],
+        "fields": [
+          {
+            "name": "First Name",
+            "metadata": {
+              "objtype": "String",
+              "fieldtype": "Textbox"
+            }
+          },
+          {
+            "name": "Last Name",
+            "metadata": {
+              "objtype": "String",
+              "fieldtype": "Textbox"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

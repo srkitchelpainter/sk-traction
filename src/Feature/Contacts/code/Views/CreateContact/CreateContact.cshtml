@@ -1,0 +1,33 @@
+﻿@model Sitecore.Feature.Contacts.Models.CreateContactModel
+
+<div class="card">
+    <div class="card-header">
+        Create Contact Information
+    </div>
+    <div class="card-body">
+        <div>
+            <p>@Model.Intro</p>
+        </div>
+        @using (Html.BeginForm("CreateContact", "CreateContact", FormMethod.Post))
+        {
+            <table>
+                <tr>
+                    <td>First Name:</td>
+                    <td>
+                        @Html.DisplayFor(x => x.FirstName)
+                        @Html.TextBoxFor(x => x.FirstName)
+                        @Html.ValidationMessageFor(x => x.FirstName)
+                    </td>
+                    <td>Last Name:</td>
+                    <td>
+                        @Html.DisplayFor(y => y.LastName)
+                        @Html.TextBoxFor(y => y.LastName)
+                        @Html.ValidationMessageFor(y => y.LastName)
+                    </td>
+                    <td><input type="submit" value="Submit" /></td>
+                </tr>
+            </table>
+        }
+    </div>
+</div>
+

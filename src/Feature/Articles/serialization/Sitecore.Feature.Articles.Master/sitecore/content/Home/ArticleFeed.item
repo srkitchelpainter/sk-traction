@@ -1,0 +1,125 @@
+----item----
+version: 1
+id: {2575C9DD-A5BC-474B-8700-EFAA94B8315F}
+database: master
+path: /sitecore/content/Home/ArticleFeed
+parent: {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}
+name: ArticleFeed
+master: {00000000-0000-0000-0000-000000000000}
+template: {76036F5E-CBCE-46D1-AF0A-4143F9B557AA}
+templatekey: Sample Item
+
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 28
+
+Software/16x16/component.png
+----field----
+field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
+name: __Renderings
+key: __renderings
+content-length: 732
+
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" s:l="{87D4A692-D997-4620-8AE1-A2EB49358096}"><r uid="{43222D12-08C9-453B-AE96-D406EBB95126}"><p:d /></r><r uid="{CF044AD9-0332-407A-ABDE-587214A2C808}"><p:d /></r><r uid="{B343725A-3A93-446E-A9C8-3A2CBD3DB489}"><p:d /></r><r uid="{26899453-D440-42B0-B827-1332B6EAF33A}" p:before="*" s:id="{DBEEC8AB-06DE-42F4-BE7E-7F4F82BB668C}" s:ph="header" /><r uid="{80453A82-1793-4934-BA95-B97EBF84A8FF}" p:after="r[@uid='{26899453-D440-42B0-B827-1332B6EAF33A}']" s:id="{14587B69-2600-4F8F-990C-2590E61A42C0}" s:ph="content" /><r uid="{CF26448F-C693-4B04-A28B-0146A6FC3839}" p:after="*[1=2]" s:id="{3BFC8F0D-6A2F-4534-A7AB-25A51CBCBE4B}" s:ph="footer" /></d></r>
+----field----
+field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
+name: __Workflow
+key: __workflow
+content-length: 38
+
+{A5BC37E7-ED96-4C1E-8590-A26E64DB55EA}
+----version----
+language: en
+version: 1
+revision: 1202956d-3bcd-4505-9474-ce37835e66dc
+
+----field----
+field: {75577384-3C97-45DA-A847-81B00500E250}
+name: Title
+key: title
+content-length: 12
+
+Article Feed
+----field----
+field: {A60ACD61-A6DB-4182-8329-C957982CEC74}
+name: Text
+key: text
+content-length: 459
+
+<h2>Presentation Competency: Configure compatible renderings on a component definition item. </h2>
+<p>{CBC91E16-E330-4C0A-8B99-06929D19F6A1} - sitecore/layout/Renderings/Feature/Articles/Article templates import and <br /> 
+{14587B69-2600-4F8F-990C-2590E61A42C0} - sitecore/layout/Renderings/Feature/Articles/Article feed controllers are compatible renderings. </p>
+
+<! --https://www.logicalfeed.com/posts/114/rendering-parameters-in-sitecore-with-example -->
+----field----
+field: {6AC81EDE-7916-49AB-BD4C-7DB8719D1A9E}
+name: cssFiles
+key: cssfiles
+content-length: 38
+
+{7D5FA7F5-4D26-49C1-BEF5-DD47813DFCE4}
+----field----
+field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
+name: __Final Renderings
+key: __final renderings
+content-length: 340
+
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{808C2C1B-2ED9-40FB-B052-FF376D26CDE5}" p:before="*" s:id="{14587B69-2600-4F8F-990C-2590E61A42C0}" s:ph="content" /><r uid="{80453A82-1793-4934-BA95-B97EBF84A8FF}"><p:d /></r><r uid="{CF26448F-C693-4B04-A28B-0146A6FC3839}" p:after="*[1=2]" /></d></r>
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20200708T215225Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+1202956d-3bcd-4505-9474-ce37835e66dc
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20200731T201947Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {3E431DE1-525E-47A3-B6B0-1CCBEC3A8C98}
+name: __Workflow state
+key: __workflow state
+content-length: 38
+
+{FCA998C5-0CC3-4F91-94D8-0A4E6CAECE88}
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

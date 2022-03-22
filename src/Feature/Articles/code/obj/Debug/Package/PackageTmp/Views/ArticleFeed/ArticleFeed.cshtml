@@ -1,0 +1,36 @@
+﻿@model Sitecore.Feature.Articles.Models.ArticleExample
+
+@*Presentation Competency: Create a rendering parameters template. Retrieve the parameters values from Sitecore.
+    Substitute them here in the html /sitecore/templates/Feature/Articles/ArticleStyles.*@
+@{
+    string TitleCss = string.Empty, BodyCss = string.Empty;
+    var rc = Sitecore.Mvc.Presentation.RenderingContext.CurrentOrNull;
+    if (rc != null)
+    {
+        var parms = rc.Rendering.Parameters;
+        TitleCss = parms["TitleCss"];
+        BodyCss = parms["BodyCss"];
+    }
+    <h3 class="@TitleCss">Articles</h3>
+    <p class="@BodyCss">
+        <ul class="relatedArticles">
+            @{
+                if (Model != null)
+                {
+                    foreach (var item in Model.ArticleList)
+                    {
+                        <li>
+                            <a href="@item.Url" title="@item.Title" aria-label="@item.Url">@item.Title</a>
+                        </li>
+                    }
+                }
+                else
+                {
+                    <li>
+                        There are no articles.
+                    </li>
+                }
+            }
+        </ul>
+    </p>
+}

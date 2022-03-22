@@ -1,0 +1,101 @@
+----item----
+version: 1
+id: {40C247A8-2B04-4934-B88B-5B5BCBE24243}
+database: master
+path: /sitecore/content/Contacts
+parent: {0DE95AE4-41AB-4D01-9EB0-67441B7C2450}
+name: Contacts
+master: {00000000-0000-0000-0000-000000000000}
+template: {76036F5E-CBCE-46D1-AF0A-4143F9B557AA}
+templatekey: Sample Item
+
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 22
+
+Network/16x16/home.png
+----field----
+field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
+name: __Renderings
+key: __renderings
+content-length: 902
+
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" s:l="{87D4A692-D997-4620-8AE1-A2EB49358096}"><r uid="{43222D12-08C9-453B-AE96-D406EBB95126}"><p:d /></r><r uid="{CF044AD9-0332-407A-ABDE-587214A2C808}"><p:d /></r><r uid="{B343725A-3A93-446E-A9C8-3A2CBD3DB489}"><p:d /></r><r uid="{4F176431-7542-4371-A4A0-58DB49BE9A98}" p:before="*" s:id="{DBEEC8AB-06DE-42F4-BE7E-7F4F82BB668C}" s:ph="header" /><r uid="{3D00E15E-CADB-4F9C-AD18-1A5AC3B8E49B}" p:after="r[@uid='{4F176431-7542-4371-A4A0-58DB49BE9A98}']" s:id="{AE523F67-C881-408E-ACD5-35EE58534930}" s:ph="content" /><r uid="{CF177494-A51B-410D-BF52-4CD46117048A}" p:after="r[@uid='{3D00E15E-CADB-4F9C-AD18-1A5AC3B8E49B}']" s:id="{EB897BDE-460A-4A08-A219-D99148000D12}" s:ph="content" /><r uid="{A9A8A709-5876-4C00-AD83-8BAF3DD29E18}" p:after="*[1=2]" s:id="{3BFC8F0D-6A2F-4534-A7AB-25A51CBCBE4B}" s:ph="footer" /></d></r>
+----field----
+field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
+name: __Workflow
+key: __workflow
+content-length: 38
+
+{A5BC37E7-ED96-4C1E-8590-A26E64DB55EA}
+----version----
+language: en
+version: 1
+revision: 39b0b65b-bd65-4209-99f4-80c1e15c0fa5
+
+----field----
+field: {75577384-3C97-45DA-A847-81B00500E250}
+name: Title
+key: title
+content-length: 8
+
+Contacts
+----field----
+field: {A60ACD61-A6DB-4182-8329-C957982CEC74}
+name: Text
+key: text
+content-length: 385
+
+<p>Development Environment Competency: Build Multi-site Implementation according to recommended practices.</p>
+<a rel="noopener noreferrer" title="Sitecore docs" target="_blank" href="https://doc.sitecore.com/developers/81/sitecore-experience-platform/en/configure-multiple-managed-websites.html">Sitecore Documentation - Configure multiple managed websites</a><br class="t-last-br" />
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20200708T220936Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+39b0b65b-bd65-4209-99f4-80c1e15c0fa5
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20200827T214241Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {3E431DE1-525E-47A3-B6B0-1CCBEC3A8C98}
+name: __Workflow state
+key: __workflow state
+content-length: 38
+
+{190B1C84-F1BE-47ED-AA41-F42193D9C8FC}

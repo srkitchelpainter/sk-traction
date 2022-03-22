@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.ContentSearch.ContentExtraction</name>
+    </assembly>
+    <members>
+        <member name="T:Sitecore.ContentSearch.ContentExtraction.DefaultMediaTextExtractor">
+            <inheritdoc />
+            <summary>
+            Extracts text from media
+            </summary>
+        </member>
+        <member name="M:Sitecore.ContentSearch.ContentExtraction.DefaultMediaTextExtractor.#ctor(Sitecore.ContentSearch.ContentExtraction.IReaderFactory)">
+            <summary>
+            Extracts text from media
+            </summary>
+            <param name="readerFactory">Provides the <see cref="T:Sitecore.ContentSearch.ContentExtraction.ILowLevelReader"/>s</param>
+        </member>
+        <member name="M:Sitecore.ContentSearch.ContentExtraction.DefaultMediaTextExtractor.ExtractText(System.String)">
+            <inheritdoc />
+            <summary>
+            Reads all the text from the given media file.
+            </summary>
+            <param name="mediaFilePath">Path to media file.</param>
+            <returns>Extracted text.</returns>
+        </member>
+        <member name="M:Sitecore.ContentSearch.ContentExtraction.Diagnostics.Assert.ArgumentNotNull(System.Object,System.String)">
+            <summary>
+            Asserts that the arguments are not null.
+            </summary>
+            <param name="argument">The argument.</param>
+            <param name="argumentName">Name of the argument.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if the argument is null.</exception>
+        </member>
+        <member name="M:Sitecore.ContentSearch.ContentExtraction.Diagnostics.Assert.IsNotNull(System.Object,System.String,System.String)">
+            <summary>
+            Asserts that the specified value is not null.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="format">The format.</param>
+            <param name="arg1">The arg1.</param>
+        </member>
+        <member name="M:Sitecore.ContentSearch.ContentExtraction.Diagnostics.Assert.IsNotNull(System.Object,System.String)">
+            <summary>
+            Asserts that the specified value is not null.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="message">The message.</param>
+            <exception cref="T:System.InvalidOperationException"><c>InvalidOperationException</c>.</exception>
+        </member>
+        <member name="M:Sitecore.ContentSearch.ContentExtraction.Diagnostics.Assert.IsNotNull(System.Object,System.Func{System.Exception})">
+            <summary>
+            Asserts that the specified value is not null.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:Sitecore.ContentSearch.ContentExtraction.Diagnostics.Assert.IsTrue(System.Boolean,System.String)">
+            <summary>
+            Determines whether the specified condition is true.
+            </summary>
+            <param name="condition">if set to <c>true</c> th condition is true.</param>
+            <param name="message">The message.</param>
+            <exception cref="T:System.InvalidOperationException"><c>InvalidOperationException</c>.</exception>
+        </member>
+        <member name="T:Sitecore.ContentSearch.ContentExtraction.Diagnostics.Debug">
+            <summary>
+            Debug class
+            </summary>
+        </member>
+        <member name="M:Sitecore.ContentSearch.ContentExtraction.Diagnostics.Debug.ArgumentNotNull(System.Object,System.String)">
+            <summary>
+            Asserts that the arguments are not null.
+            </summary>
+            <param name="argument">The argument.</param>
+            <param name="argumentName">Name of the argument.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if the argument is null.</exception>
+        </member>
+        <member name="M:Sitecore.ContentSearch.ContentExtraction.Diagnostics.Debug.Assert(System.Boolean,System.String)">
+            <summary>
+            Asserts a condition.
+            </summary>
+            <param name="condition">if set to <c>true</c> this instance is condition.</param>
+            <param name="errorMessage">The error message.</param>
+            <remarks>Requires the preprocessor constant DEBUG</remarks>
+            <exception cref="T:System.Exception"><c>InvalidOperationException</c>.</exception>
+        </member>
+        <member name="M:Sitecore.ContentSearch.ContentExtraction.Diagnostics.Debug.ThrowInvalidOperation(System.String)">
+            <summary>
+            Throws an <exception cref="T:System.InvalidOperationException"/> condition.
+            </summary>
+            <param name="errorMessage">The error message.</param>
+            <remarks>Requires the preprocessor constant DEBUG</remarks>
+            <exception cref="T:System.Exception"><c>InvalidOperationException</c>.</exception>
+        </member>
+        <member name="T:Sitecore.ContentSearch.ContentExtraction.ILowLevelReader">
+            <summary>
+            Represents a media file reader object.
+            </summary>
+        </member>
+        <member name="M:Sitecore.ContentSearch.ContentExtraction.ILowLevelReader.ReadAll(System.String)">
+            <summary>
+            Reads all the text under the given media file.
+            </summary>
+            <param name="filePath">Path to media file.</param>
+            <returns>All text contained in the file.</returns>
+        </member>
+        <member name="T:Sitecore.ContentSearch.ContentExtraction.IMediaFileTextExtractor">
+            <summary>
+            Represents the media file text extractor.
+            </summary>
+        </member>
+        <member name="M:Sitecore.ContentSearch.ContentExtraction.IMediaFileTextExtractor.ExtractText(System.String)">
+            <summary>
+            Extract the text from the given media file.
+            </summary>
+            <param name="mediaFilePath">Path to media file.</param>
+            <returns>Extracted text.</returns>
+        </member>
+        <member name="T:Sitecore.ContentSearch.ContentExtraction.IReaderFactory">
+            <summary>
+            Represent the factory class for <see cref="T:Sitecore.ContentSearch.ContentExtraction.ILowLevelReader"/>. Implement this interface if you want to build your custom extraction logic.
+            </summary>
+        </member>
+        <member name="M:Sitecore.ContentSearch.ContentExtraction.IReaderFactory.CreateReader(System.String)">
+            <summary>
+            Creates a concrete <see cref="T:Sitecore.ContentSearch.ContentExtraction.ILowLevelReader"/> instance.
+            </summary>
+            <param name="mediaFileExtension">Media file extension</param>
+        </member>
+        <member name="T:Sitecore.ContentSearch.ContentExtraction.Readers.DefaultReaderFactory">
+            <inheritdoc />
+            <summary>
+            Default reader factory.
+            </summary>
+        </member>
+        <member name="M:Sitecore.ContentSearch.ContentExtraction.Readers.DefaultReaderFactory.CreateReader(System.String)">
+            <inheritdoc />
+            <summary>
+            Creates a concrete <see cref="T:Sitecore.ContentSearch.ContentExtraction.ILowLevelReader" /> instance.
+            </summary>
+            <param name="extension">Media file extension</param>
+            <returns>The <see cref="T:Sitecore.ContentSearch.ContentExtraction.ILowLevelReader" />.</returns>
+        </member>
+        <member name="T:Sitecore.ContentSearch.ContentExtraction.Readers.OpenXmlDocReader">
+            <inheritdoc cref="T:Sitecore.ContentSearch.ContentExtraction.ILowLevelReader"/>
+        </member>
+        <member name="M:Sitecore.ContentSearch.ContentExtraction.Readers.OpenXmlDocReader.ReadAll(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="T:Sitecore.ContentSearch.ContentExtraction.Readers.OpenXmlExcelReader">
+            <inheritdoc />
+        </member>
+        <member name="M:Sitecore.ContentSearch.ContentExtraction.Readers.OpenXmlExcelReader.ReadAll(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="T:Sitecore.ContentSearch.ContentExtraction.Readers.OpenXmlPresentationReader">
+            <inheritdoc />
+        </member>
+        <member name="M:Sitecore.ContentSearch.ContentExtraction.Readers.OpenXmlPresentationReader.ReadAll(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="T:Sitecore.ContentSearch.ContentExtraction.Readers.PdfSharpReader">
+            <inheritdoc />
+        </member>
+        <member name="M:Sitecore.ContentSearch.ContentExtraction.Readers.PdfSharpReader.ReadAll(System.String)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
