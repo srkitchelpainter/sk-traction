@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<KnownItemCache>
+  <KnownItems Configuration="Debug">
+    <Id Path="/sitecore/layout">eb2e4ffd-2761-4653-b052-26a64d385227</Id>
+    <Id Path="/sitecore/layout/Layouts">75cc5ce4-8979-4008-9d3c-806477d57619</Id>
+    <Id Path="/sitecore/layout/Layouts/Project">da04b275-8838-4a3a-afee-817cf1fdd2eb</Id>
+    <Id Path="/sitecore/layout/Layouts/Project/Default Layout">87d4a692-d997-4620-8ae1-a2eb49358096</Id>
+    <Id Path="/sitecore/layout/Placeholder Settings">1ce3b36c-9b0c-4eb5-a996-bfcb4eaa5287</Id>
+    <Id Path="/sitecore/layout/Placeholder Settings/Project">f5f0fbe3-61ad-4967-a5d8-8d760331d6a1</Id>
+    <Id Path="/sitecore/layout/Placeholder Settings/content">8ae1c245-a4fa-46ae-9b35-4fbc15f63169</Id>
+  </KnownItems>
+</KnownItemCache>
