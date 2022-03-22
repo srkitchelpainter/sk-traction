@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ItemIconCache>
+  <Item ItemPath="/sitecore/system" ItemIcon="/temp/IconCache/People/16x16/workstation1.png" />
+  <Item ItemPath="/sitecore/system/Modules" ItemIcon="/temp/IconCache/Software/16x16/jar.png" />
+  <Item ItemPath="/sitecore/system/Settings" ItemIcon="/temp/IconCache/Applications/16x16/preferences.png" />
+</ItemIconCache>

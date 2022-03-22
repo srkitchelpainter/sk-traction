@@ -1,0 +1,109 @@
+﻿@inherits WebViewPage
+@{
+    Layout = null;
+}
+<!doctype html>
+<html lang="@Sitecore.Context.Language">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="itemID" content="@Sitecore.Context.Item.ID.ToString()" />
+
+    <link rel="icon" href="images/favicon.ico">
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/sticky-footer-navbar.css" rel="stylesheet">
+
+    @*You can check the page mode and generate different output when the user accesses the Page Editor, Preview, or Sitecore browser-based debugger, or
+            when specific features are visible in those interfaces, without that output appearing on the published site.
+
+        You can use the following properties of the Sitecore.Context.PageMode property to determine the active page modes.
+
+        IsDebugging (/debug) — The browser-based debugger is enabled
+        IsNormal (/normal) — No CMS features are enabled (the user is accessing the published site)
+        IsExperienceEditor (/experienceEditor) — The user is in the Page Editor
+        IsPageEditorEditing (/experienceEditor/edit) — The user is inline editing in the Page Editor
+        IsPreview (/preview) — The user is in the Preview user interface
+        IsProfiling (/IsProfiling) — Performance profiling is active
+        There are number of use for using page mode property like to set any dummy source to component in case you are viewing in editor mode,
+        or write some data/results, or showing additional content or fields in any particular mode if you are in debugging mode etc*@
+
+    @if (!Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+
+    }
+
+    @*Define the following using in the layout template:@using Sitecore.Mvc.Analytics.Extensions
+        @Html.Sitecore().VisitorIdentification()*@
+
+    @*Managing css and javascript as content in sitecore*@
+    @{
+        //var fileVersion = System.Diagnostics.FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location);
+
+        var cssFiles = Sitecore.Data.ID.ParseArray(Sitecore.Context.Item["cssFiles"]);
+        var cssIDs = cssFiles.ToList();
+
+        foreach (var cssID in cssIDs)
+        {
+            var mediaItem = Sitecore.Context.Database.GetItem(cssID);
+            var cssFileUrl = Sitecore.Resources.Media.MediaManager.GetMediaUrl(mediaItem);
+            //TO-DO: Fix mediaurl path
+            <link href="@cssFileUrl" rel="stylesheet" type="text/css" />
+        }
+
+        //.Select(id => Sitecore.Context.Item.Database.GetItem(id)).ToList();
+
+        //foreach (var cssFile in cssFiles)
+        //{
+        //    var cssFileUrl = Sitecore.Resources.Media.MediaManager.GetMediaUrl(cssFile) + "?v=" + fileVersion
+        //    < link href = "@cssFileUrl" rel = "stylesheet" type = "text/css" />
+        //}
+
+        //var jsFiles = Sitecore.Data.ID.ParseArray(Sitecore.Context.Item["JavaScript Files"])
+        //.Select(id => Sitecore.Context.Item.Database.GetItem(id)).ToList();
+
+        //foreach (var jsFile in jsFiles)
+        //{
+        //    var jsFileUrl = Sitecore.Resources.Media.MediaManager.GetMediaUrl(jsFile) + "?v=" + fileVersion
+        //    < script type = "text/javascript" src = "@jsFileUrl" ></ script >
+        //}
+    }
+    <title>Sandbox</title>
+</head>
+
+<body>
+    @*Presentation Competency: Define the difference between static and dynamic binding.*@
+    @*Dynamic binding references are resolved at run time. If you are binding anything in placeholder from Sitecore then it’s dynamic.*@
+    @Html.Sitecore().Placeholder("header")
+
+    <main role="main" class="container">
+        <div>
+            <h1>@Html.Sitecore().Field("Title")</h1>
+            <p>@Html.Sitecore().Field("Text")</p>
+            @*Presentation Competency: + Set up allowed controls on a placeholder definition item.*@
+            @*/sitecore/layout/Placeholder Settings/content*@
+            @Html.Sitecore().Placeholder("content")
+        </div>
+    </main>
+
+    @Html.Sitecore().Placeholder("footer")
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
+
+@*Presentation Competency: + Create Sitecore Layouts and connect them to matching views on the file system*@
+@*"~/Views/Identity/Logo.cshtml"
+    "~/src/Feature/Articles/code/Views/ArticleFeed/ArticleFeed.cshtml"
+    "~/src/Feature/Articles/code/Views/Article/Article.cshtml"
+    "~/src/Feature/Articles/code/Views/Articles/Index.cshtml"*@
+
+@*Presentation Competency: + Define the difference between static and dynamic binding.*@
+@*Use static binding by specifying the sublayout of controls. Example: <sc:Sublayout ID="scHeadSection" Path="~/Common/HeadSection.ascx" runat="server" />*@
+
+@*Presentation Competency: + Use presentation details to add components in the Experience Editor.*@
+    @*/sitecore/content/Home*@

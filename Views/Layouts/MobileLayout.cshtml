@@ -1,0 +1,54 @@
+﻿@inherits WebViewPage
+@{
+    Layout = null;
+}
+
+@*Presentation Competency: + Create Sitecore Standard Values and set up presentation for different devices*@
+    @*/sitecore/layout/Devices/iPhone7*@
+    @*/sitecore/templates/Feature/Articles/Article template/__Standard Values*@
+
+<!doctype html>
+<html lang="@Sitecore.Context.Language">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="itemID" content="@Sitecore.Context.Item.ID.ToString()" />
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/sticky-footer-navbar.css" rel="stylesheet">
+    <style>
+        .blur-text {
+            color: transparent;
+            text-shadow: 0 0 5px #000;
+        }
+    </style>
+    <title>Sandbox</title>
+</head>
+
+<body>
+
+    @Html.Sitecore().Placeholder("header")
+
+    <main role="main" class="container">
+        <div class="blur-text">
+            <h1>@Html.Sitecore().Field("Title")</h1>
+            <p>@Html.Sitecore().Field("Text")</p>
+            @Html.Sitecore().Placeholder("content")
+        </div>
+    </main>
+
+    @Html.Sitecore().Placeholder("footer")
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
+
+@*Presentation Competency: + Create Sitecore Layouts and connect them to matching views on the file system*@
+@*"~/Views/Identity/Logo.cshtml"
+    "~/src/Feature/Articles/code/Views/ArticleFeed/ArticleFeed.cshtml"
+    "~/src/Feature/Articles/code/Views/Article/Article.cshtml"
+    "~/src/Feature/Articles/code/Views/Articles/Index.cshtml"*@
