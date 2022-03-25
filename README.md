@@ -32,7 +32,6 @@ Sitecore Traction Project 2.0. ArticlesController.cs builds a module which impor
         RECONFIGURE;
     GO
   ```
-  * Access and permissions to download the project source code: https://bitbucket.org/simplea/sk-traction/
     * Development Competency: 
         + Set up a Visual Studio solution and project for Sitecore development
         + Prepare the Sitecore Rocks Visual Studio plug-in and set up a connection to a Sitecore instance
@@ -291,7 +290,7 @@ This makes it possible for a multiple modules and business logic to share items 
 
 1. System Templates
 If a template is going to be the base template for other templates, make sure it is only used for this purpose. 
-Don’t make your system templates inherit from each other. Don’t make any items use these templates directly. 
+DonÂ’t make your system templates inherit from each other. DonÂ’t make any items use these templates directly. 
 Used for templates which form the fields of one section of another template.
 
 2. Data Templates
@@ -300,8 +299,8 @@ content items. i.e. data templates are for content in your site which is not a p
 
 3. Page Templates
 These are templates for page-level content items. These should rarely need to define their own fields. 
-Instead make these templates inherit from one or more of your system templates. Don’t be tempted to make page templates inherit 
-from each other. It might seem like a good idea, but it reduces flexibility. It’s better to have several page templates inherit 
+Instead make these templates inherit from one or more of your system templates. DonÂ’t be tempted to make page templates inherit 
+from each other. It might seem like a good idea, but it reduces flexibility. ItÂ’s better to have several page templates inherit 
 from the exact same set of system templates than to inherit from each other as this keeps your inheritance hierarchy simple.
 
 4. Parameters Templates
@@ -363,7 +362,7 @@ Item
 
 ```
 Master:
-* Contains all versions of all content supporting CMS users. stores the master copy of all versions of all content items and media – unpublished or published – 
+* Contains all versions of all content supporting CMS users. stores the master copy of all versions of all content items and media Â– unpublished or published Â– 
 across all languages and publishing targets. The Master database also contains settings used to shape the experience for visitors, for example, marketing goals and outcomes, 
 form definitions, and commerce settings.
 
