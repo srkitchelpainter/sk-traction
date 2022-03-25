@@ -87,8 +87,6 @@ Examples:
 Local Repository:
 \source\repos\sitecore-traction-repo\LearnSc93Proj
 
-Bitbucket Project:
-https://bitbucket.org/simplea/sk-traction/src/master/
 Local Folder: \source\repos\sitecore-traction-repo\sk-traction
 
 + Deploy a website.
